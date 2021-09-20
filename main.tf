@@ -20,14 +20,8 @@ module "lambda_function" {
   handler       = "index.lambda_handler"
   runtime       = "python3.8"
 
-  source_path = "./src/image_processer.py"
+  source_path = "./src/index.py"
 }
-
-### lamda ARN ###
-
-#data "aws_lambda_function" "existing" {
-#  function_name = module.lambda_function_arn
-#}
 
 
 ### cloudwatch event rule ###
